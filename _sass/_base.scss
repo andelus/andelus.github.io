@@ -1,206 +1,72 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+/**** Import Fonts ****/
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,100|Open+Sans:400,300,600,700);
+  //Icons
+  @import url(ionicons.css);
+  //Animations
+  @import url(animate.css);
+html{
+  height: 100%;
+}
+//Body Style
+body{
+  font-family : $primaryfont; // Primary Font
+  font-size: 1.2rem;
+  line-height: 160%;
+  height: 100%;
+  color : $lightdark; // Content text color
+  background  : $lightgrey; // Bg color
+
+
 }
 
-
-
-/**
- * Basic styling
- */
-body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
+//Heading Style
+#{headings()} {
+  font-family: $secondaryfont;
+  font-weight: normal;
+  color : $lightdark;
 }
 
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+//Heading 1
+h1{
+  font-size: 2.5em;
+  line-height: 110%;
 }
 
+//Heading 2 Style
 
-
-/**
- * Images
- */
-img {
-    max-width: 100%;
-    vertical-align: middle;
+//Heading 3 Style
+h3{
+  font-size: 2.5em;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+//Anchors Style
+a{
+  text-decoration: none;
+  color: $lightdark;
+  &:hover{
+    color: $lightgreen ;
+  }
 }
 
+//Paragraph Style
+p{
+  font-family: $secondaryfont;
 
+  line-height: 1.7em;
 
-/**
- * Figures
- */
-figure > img {
-    display: block;
 }
 
-figcaption {
-    font-size: $small-font-size;
+//Label Style
+label{
+  color: $accentdark;
+  font-size: .7em;
 }
-
-
-
-/**
- * Lists
- */
-ul, ol {
-    margin-left: $spacing-unit;
+//icons
+i{
+  margin: 2px;
+  vertical-align: middle;
 }
+//img crisp
 
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
-}
-
-
-
-/**
- * Links
- */
-a {
-    color: $brand-color;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
-}
-
-
-
-/**
- * Blockquotes
- */
-blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
-    }
-}
+//Paragraphs Style

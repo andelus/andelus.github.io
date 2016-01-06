@@ -1,242 +1,375 @@
-/**
- * Site header
- */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+//Susy Setup
+  $total-columns : 12;
+  $column-width  : 4em;
+  $gutter-width  : 1em;
+  $grid-padding  : $gutter-width;
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
+@include border-box-sizing;
+
+//Breakpoints
+  $small   : 30em; //Small Devices
+  $medium  : 65em; //Meduim Devices
+  $large   : 75em; //Large Devices
+//Content
+.layout{
+  @include container;
 }
 
-.site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
-}
-
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
-}
-
-
-
-/**
- * Site footer
- */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
-}
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
-
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
+//Header
+header{
+  img{
     display: block;
-    font-size: 24px;
+    width : 50%;
+    max-width: 200px;
+    margin: 1em auto;
+  }
+  //branding
+  @include at-breakpoint($medium){
+    @include span-columns(10 omega,12);
+      .branding{
+          display: block;
+          margin: 0 auto;
+      }
+  }
+}
+//footer
+footer{
+    .footer{
+      padding: 10px;
+      p{
+        font-size: 1.1rem;
+        font-weight: bold;
+        span{
+          font-weight: normal;
+          i{
+            color: $red;
+          }
+        }
+      }
+    }
+  @include at-breakpoint($medium){
+    @include span-columns(10 omega,12);
+      .footer{
+          clear: both;
+          float: right;
+      }
+  }
+}
+//navigation
+#navigation{
+  //display: none;
+  background: $lightdark; //Bg Color
+  padding-top: 15px; // Space at the top
+
+  //For Medium Screens
+  @include at-breakpoint($medium){
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width : 260px;
+    @include box-shadow(rgba(0, 0, 0, 0.2) 2px 0px 2px);//box-shadow
+  }
+  //Symbol
+  .symbol{
+    img{
+      display: none;
+    }//Dont display when the screen is mobile
+    @include at-breakpoint($medium){
+    img{
+      display: block;
+      margin: 0 auto;
+      margin-bottom: .6em;
+      width: 6em;
+    }// Display the symbol for medium screens
+    a img{
+      @include single-transition(all,.3s,ease-out);
+      &:hover{
+        width: 7em;
+      }
+    }// Hover animation
+  }//Medium
+
+  }
+  //Navigation Menu
+  ul.nav{
+    li{
+      //When screen is at meium size add a margin bottom to the links
+      @include at-breakpoint($medium){
+        margin-bottom: 40px;
+      }
+      i{
+        padding-right: .4em;
+        font-size: 1.8rem;
+        vertical-align: middle;
+      }
+      a{
+        @include single-transition(all,.5s,ease-out);
+        font-size: 1.2rem;
+        font-weight: 100;
+        color: $lightgrey;
+        &:hover{
+          margin-left: .5rem;
+          color: $lightgreen ;
+        }
+      }// give hover effect to menu items
+      .active{
+        color: $lightgreen ;
+        margin-left: .5rem;
+      }
+    }
+  }// ul nav
+  //Navigation Social
+  .social{
+    @include at-breakpoint($medium){
+      position: absolute;
+      bottom:0;
+      left:2.5em;
+    }//Push social icons to the bottom when screen is at medium size
+    ul.icons{
+      text-align: center; //Align to the center when mobile view
+      li{
+        display: inline;
+        padding-left: 10px;
+        a{
+          @include single-transition(all,.5s,ease-out);
+          color: $lightgrey;
+          &:hover{
+            color: $lightgreen;
+          }
+        }
+      }//list items
+    }
+  }
+
+
 }
 
 
+          /* _____________ Page Content Layout _______________ */
 
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
+//Page Content
+#pageContent{
+  //on small size
+  .tagline{
+    margin-top: 1em;
+      h1{
+        font-size: 1.6em;
+        @include single-transition(all,.3s,ease-out);
+      }
+  }// Give small space on the top
+  //Explore Button
+  .explore{
+    display: block;
+    margin: 10px auto;
+    font-size: 1.2em;
+  }
+  .profile{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2em;
+  }//Profile image centred
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
+  //Post Page on small device
+  .post{
+    .title{
+      font-family: $primaryfont;
+      font-weight: bold;
+      @include single-transition(all,.3s,ease-out);
+      font-size: 1.2rem;
     }
-}
+    .postContent{
+      padding: 20px;
+      .featured{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 70%;
+      }
+      p{
+        text-indent: 1em;
+      }
+    }
+    .postDetails{
 
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
+      span{
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+        i{
+          color:$purple;
         }
+      }
+      .tag{
+        color: $purple;
+      }
+    }//Post details
+  }//Post title in small size
+
+  //Contact page in small size
+  #contact{
+    //Title
+    h3{
+      font-family: $primaryfont;
+      font-size: 1.2em;
+      border-bottom: 1px solid $linegrey;
+      margin: 0;
+      padding-bottom: 10px;
+      @include single-transition(all,.3s,ease-out);
     }
+   //Label
+   label{
+     font-size: 1.2rem;
+     color: $purple;
+   }
+   //Contact description and information padding
+   .contactDesc, .contactInfo{
+     padding: 10px;
+   }
+   //Contact card in small size
+   .contactInfo{
+     .contactCard{
+      li i{
+        font-size: 1.6rem;
+        color: $purple;
+      }
+       li a{
+         font-size: 1rem;
+       }
+     }
+   }
+  }
+  //when screen is on medium
+  @include at-breakpoint($medium){
+    //@include span-columns(9.07,12);
+    @include container;
+    @include push(2.9);
+    //@include susy-grid-background;
+    //give a push to the col to fill the empty space left by the fixed sidebar
+    //Home Page
+    .tagline{
+      width:100%;
+      h1{
+        font-size: 2.5em;
+      }
+    }
+    .explore{
+      margin: 20px;
+      position: absolute;
+      font-size: 2em;
+      bottom: 0;
+      right: 0;
 
-    h3 {
-        font-size: 26px;
+    }
+    //About page
+    .profile{
+      margin-top: -4em;
+    }
+    //Car
+    .card{
+      width: columns(12,12);
+      margin-bottom: 2em;
+    }
+    //Skills
+    #skills{
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
+      .col-1{
+        float: left;
+      }
+      .php{
+        width: 300px;
+        height: 80%;
+        min-height : 250px;
+
+      }//php
+      .html{
+        clear: both;
+        width: 280px;
+        height: 80%;
+        min-height : 260px;
+        margin-left: 1.47em;
+
+      }//Html
+      .ps{
+        width: 290px;
+        height: 80%;
+        min-height : 370px;
+
+      }//photoshop
+      .js{
+        width: 245px;
+        height : 200px;
+
+      }//Javascript
+
+      .css{
+        width: 500px;
+        height : 130px;
+
+      }//Css
+      .android{
+        width: 220px;
+        height : 140px;
+
+      }
+    }
+/* --------------- Articles Page ---------------- */
+    //Articles
+    #articles{
+      @include span-columns(8,12);
+    }
+    //Articles side bar
+    #sideArticles{
+      @include span-columns(4 omega,12);
+    }
+/* --------------- Articles Page ---------------- */
+
+/* --------------- Post Page ---------------- */
+    #post{
+      @include span-columns(12,12);
+      .post{
+        .title{
+          font-size: 2rem;
+        }//Post Title
+        .postContent{
+          .featured{
+          }//Featured Image
+        }//Post Content
+        .postDetails{
+          @include postDetails;
+          span{
+            display: inline;
+          }
+        }//Post details
+      }
+    }
+/* --------------- Post Page ---------------- */
+
+/* --------------- Contact Page ---------------- */
+    #contact{
+      @include span-columns(12,12);
+      h3{
+        font-size: 1.4em;
+        text-align: center;
+      }
+      .contactDesc{
+        @include span-columns(8,12);
+      }
+      .contactInfo{
+        @include span-columns(4 omega,12);
+        .contactCard{
+          @include description;
+          li i{
+
+          }
+          li a{
+
+          }
         }
+      }
     }
+/* --------------- Contact Page ---------------- */
+  }
 
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
 }

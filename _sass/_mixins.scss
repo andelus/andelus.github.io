@@ -1,0 +1,110 @@
+//Button Mixin
+
+@mixin large-button{
+  background-color: $lightdark;
+  border: none;
+  padding: 15px;
+  margin: 5px;
+  @include border-radius(5px);
+  color: $lightgrey;
+  font-size: 2em;
+  @include box-shadow($lightdark 0px 5px 10px);
+  @include single-transition(all,.3s,ease-out);
+  &:hover{
+    cursor: pointer;
+    background-color: $purple;
+    @include box-shadow($lightdark 0px 10px 20px);
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+@mixin small-button{
+  background-color: $lightdark;
+  border: none;
+  padding: 9px;
+  margin: 3px;
+  @include border-radius(3px);
+  color: $lightgrey;
+  font-size: .9em;
+  @include box-shadow($lightdark 0px 0px 20px);
+  @include single-transition(all,.3s,ease-out);
+  &:hover{
+    cursor: pointer;
+    background-color: #f06539;
+    @include box-shadow($lightdark 0px 5px 20px);
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+//Skills card
+@mixin skill-card{
+  float: left;
+  height: 100%;
+  padding: 10px;
+  margin: 10px;
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0px 8px 30px);
+  @include border-radius(3px);
+  img{
+    width: 3em;
+  }
+  &:hover{
+
+  }
+}
+//Description bubble
+@mixin description{
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  background-color: $lightgrey;
+  @include border-radius(5px);
+}
+
+//Input
+@mixin input{
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+  border-bottom: 1px dashed $linegrey;
+  @include box-sizing;
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.5em;
+  font-size: 1.2rem;
+  @include input-placeholder {
+    color: $accentdark;
+    font-size: 1.2rem;
+  }
+
+}
+
+//Post details
+@mixin postDetails{
+  background-color: lighten($linegrey, 10);
+  @include border-radius(30px);
+  font-size: 1rem;
+  padding: 2px 8px 2px 8px;
+  //Author
+  .author{
+
+  }
+  //Release Date
+  .date{
+
+  }
+  //Tags
+  .tag{
+    float: right;
+    margin-right: 8px;
+    font-size: .7rem;
+    color: $purple;
+  }
+}

@@ -4,17 +4,32 @@
   {% include head.html %}
 
   <body>
-
+    <!-- Header -->
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    <!-- Navigation -->
+    {% include navigation.html %}
+
+    <!-- Content -->
+    <div id="pageContent">
+      <section class="layout">
+        <div class="stage">
+          {{ content }}
+        </div><!-- Stage -->
+
+      </section><!-- Layout -->
+    </div><!-- Page Content -->
 
     {% include footer.html %}
 
+    <!-- Scripts -->
+    <!-- Jquery -->
+    <script type="text/javascript" src="lib/jquery.min.js">
+    </script>
+    <!-- Layout fix -->
+    <script type="text/javascript" src="js/behaviour.min.js">
+    </script>
+    <!-- Live Reload -->
   </body>
 
 </html>

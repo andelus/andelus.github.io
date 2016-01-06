@@ -1,0 +1,286 @@
+/* --------------- Intro Page ---------------- */
+  //Tag Line
+  .tagline{
+    h1{
+      b{
+        font-weight: 600;
+      }
+    }
+  }
+  .tagline {
+    h1:nth-child(3){
+    font-weight: 700;
+    }
+  }
+    //Button style
+    .explore{
+      @include large-button;
+    }
+    .next{
+      display: block;
+      @include small-button;
+      float: right;
+    }
+/* --------------- Intro Page ---------------- */
+
+/* --------------- About Page ---------------- */
+
+    //Profile image
+    .profile{
+      width: 200px;
+      height: 200px;
+      @include background(image-url("../assets/misc/profile.jpg") 40% 40%);
+      @include border-radius(50%);
+      @include background-size(cover);
+      @include box-shadow($lightdark 0px 0px 2px);
+      @include single-transition(all,.3s,ease-out);
+      &:hover{
+        cursor: pointer;
+        background-color: $purple;
+        @include box-shadow($lightdark 0px 5px 20px);
+      }
+    }
+
+    //Card ui
+    .card{
+      height: 100%;
+      background-color: white;
+      @include border-radius(5px);
+      padding: 20px;
+      margin: 7px auto;
+      @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 2px);
+      .label{
+        font-size: 1.2em;
+        margin: 1px;
+        border-bottom: 1px solid $linegrey;
+        padding-bottom: 4px;
+        i{
+          margin : 0 4px 0 0;
+          font-size: 1.3em;
+          vertical-align: middle;
+        }
+      }
+    }
+/* --------------- About Page ---------------- */
+
+/* --------------- Skills Page ---------------- */
+
+    //Skills card
+    .skill-card{
+      @include skill-card;
+      &:hover{
+        cursor: pointer;
+      }
+      .close{
+        position: absolute;
+        top:15px;
+        right: 15px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: $lightgrey;
+      }
+    }
+    .php{
+
+      background-color: $purple;
+    }//php
+    .ps{
+
+      background-color: $lightblue;
+    }//photoshop
+    .js{
+
+      background-color: $red;
+    }//Js
+    .html{
+
+      background-color: $orange;
+    }//Html
+    .css{
+
+      background-color: $blue;
+    }//css
+    .android{
+
+      background-color: $green;
+    }
+    //Skills content
+    #skillContent{
+      position: relative;
+      display: none;
+      width:100%;
+      margin: 0 auto;
+      padding: 20px;
+      h4{
+        color: $lightgrey;
+        font-size: 1.3rem;
+        font-weight: 100;
+      }//Title
+      .description{
+        @include description;
+        img{
+          width: 9%;
+          float: left;
+          margin-right: 14px;
+          margin-top: 6px;
+          margin-left: 6px;
+        }//Skill Logo
+        a{
+          color: $lightdark;
+          font-weight: bold;
+        }//Skill Official Link
+        p{
+          margin-left: 6px;
+          text-align: left;
+          font-size: 1.1rem;
+        }//Description of what you learned
+        hr{
+           height: 1px;
+           border: 0;
+           border-top: 1px solid $linegrey;
+           margin: 5px;
+        }//Seperation Line
+
+      }//description
+    }//Skill Content
+
+    //Window
+    #works{
+      margin-top:20px;
+      .projectLogo{
+        float: left;
+        padding-top: 5px;
+        width: 15%;
+      }
+      .projectName{
+        display: block;
+        color: $lightgrey;
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin: 4px;
+        span{
+          font-weight: 100;
+          font-size: 1.1rem;
+        }
+      }
+      .projectDesc{
+        @include description;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 1.1rem;
+        a{
+          color: $lightdark;
+          font-weight: bold;
+          font-size: .8rem;
+          float: right;
+          margin: 5px;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+/* --------------- Skills Page ---------------- */
+
+
+
+/* --------------- Articles Page ---------------- */
+
+    //Article item
+    .article{
+      margin-top: 10px;
+      margin-bottom: 60px;
+      //Article Title
+      .title{
+        font-weight: bold;
+        a{
+          color: $accentdark;
+          @include single-transition(all,.3s,ease-out);
+          &:hover{
+            color: $purple;
+          }
+          i{
+            color: $lightdark;
+            font-size: 1.3rem;
+          }
+        }
+
+      }
+
+      //Description
+      .shortDesc{
+        padding: 5px;
+
+      }
+      .readmore{
+        float: right;
+        color: darken($linegrey,30);
+        &:hover{
+          color: $purple;
+        }
+        i{
+          vertical-align: middle;
+        }
+      }
+
+      //Post Details
+      .postDetails{
+        @include postDetails;
+      }
+    }
+
+
+    //Side Articles Bar
+    #sideArticles{
+      .search{
+        .input{
+          @include input;
+        }
+      }
+      #categories{
+        margin: 15px 0;
+        .label{
+          border: none;
+        }
+        .categories{
+          padding: 10px;
+          li a{
+            font-size: 1rem;
+          }
+        }
+      }
+
+    }
+    //Paginate
+    #paginate{
+      border-top: 1px solid $linegrey;
+      text-align: center;
+      padding-top: 20px;
+      .pages li{
+        display: inline;
+        margin-right: 20px;
+      }
+      .pages li a{
+        color: $accentdark;
+        font-size: 1rem;
+        &:hover{
+          color: $purple;
+        }
+        i{
+          font-size: 1.3rem;
+          vertical-align: middle;
+        }
+      }
+    }
+
+/* --------------- Articles Page ---------------- */
+
+/* --------------- Post Page ---------------- */
+    .post{
+      .title{
+
+      }
+    }
+
+/* --------------- Post Page ---------------- */
