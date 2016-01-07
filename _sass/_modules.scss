@@ -190,12 +190,12 @@
     //Article item
     .article{
       margin-top: 10px;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
       //Article Title
       .title{
         font-weight: bold;
         a{
-          color: $accentdark;
+          
           @include single-transition(all,.3s,ease-out);
           &:hover{
             color: $purple;
@@ -214,10 +214,10 @@
 
       }
       .readmore{
-        text-align: right;
-        color: darken($linegrey,30);
+        float: right;
+        padding-top: 10px;
         &:hover{
-          color: $purple;
+          color: $lightblue;
         }
         i{
           vertical-align: middle;

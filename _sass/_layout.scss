@@ -153,7 +153,7 @@ footer{
 
 //Page Content
 #pageContent{
-
+  clear: both;
   //on small size
   .tagline{
     margin-top: 1em;
@@ -394,6 +394,11 @@ footer{
           font-size: 1.7rem;
           font-weight: bold;
           text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+          i{
+
+          }
         }//title
         .shortDesc{
           padding: 5px;
@@ -401,20 +406,25 @@ footer{
         .postDetails{
           text-align: center;
           font-size: 1rem;
-          margin: 10px auto;
+          margin: 20px auto;
           span{
             display: block;
           }
         }
         .articleImg{
+          position: relative;
+          height: 100px;
+          width: 100%;
+          overflow: hidden;
+          @include border-radius(5px);
+          @include single-transition(all,.3s,ease-out);
+          @include opacity(0.8);
           img{
-            width: 100%;
-            @include border-radius(5px);
-            @include opacity(0.8);
-            @include single-transition(all,.3s,ease-out);
-            &:hover{
-              @include opacity(1);
-            }
+            position: absolute; right:0; bottom: 0;
+          }
+          &:hover{
+            @include opacity(1);
+
           }
         }
         @include at-breakpoint($medium){
@@ -424,13 +434,16 @@ footer{
             float:left;
             //@include span-columns(6,12);
             //&:nth-child(n) { @include omega;}
-            margin-right:10px;
+            margin: 10px 8px;
           .postDetails{
             @include postDetails;
             text-align: inherit;
             span{
               display: inline;
             }
+          }
+          .readmore{
+            padding-top: 10px;
           }
         }
       }
@@ -463,14 +476,15 @@ footer{
         float: right;
       }
       .articleImg{
+
+        @include single-transition(all,.3s,ease-out);
+        @include opacity(0.8);
         img{
-          width:100%;
+          width: 100%;
           @include border-radius(5px);
-          @include opacity(0.8);
-          @include single-transition(all,.3s,ease-out);
-          &:hover{
-            @include opacity(1);
-          }
+        }
+        &:hover{
+          @include opacity(1);
         }
       }
       @include at-breakpoint($medium){

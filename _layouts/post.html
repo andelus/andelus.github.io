@@ -3,13 +3,14 @@ layout: default
 ---
 
 <!-- Articles Card -->
+<a href="/articles"><i class="icon ion-ios-arrow-left"></i> Back</a>
 <div id="post" class="card">
   <!-- Posts -->
   <div class="post">
     <h4 class="title">
       <i class="icon ion-social-angular"></i> {{ page.title }}</h4>
     <div class="postContent">
-      <img src="" alt="" class="featured">
+      <img src="{{page.image}}" alt="" class="featured">
         <p>{{ content }}</p>
     </div>
     <!-- Post Details -->

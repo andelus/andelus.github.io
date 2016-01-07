@@ -1,45 +1,15 @@
 ---
 layout: default
 ---
-
 <!-- Articles Card -->
 <div id="articles" class="card">
   <!-- Label -->
   <h3 class="label"><i class="icon ion-ios-paper-outline"></i>Latest Articles</h3>
   <!-- Posts -->
-  <div class="article">
-    <h4 class="title">
-      <a href=""><i class="icon ion-social-angular"></i> Angular Js Quick Start</a></h4>
-    <p class="shortDesc">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in...
-    </p>
-    <!-- Post Details -->
-    <div class="postDetails">
-      <span class="author">
-        <i class="icon ion-code"></i>Tasfaout Yassine</span>
-      <span class="date">
-        <i class="icon ion-ios-calendar-outline"></i>
-        9th Dcemeber 2015
-      </span>
-      <span class="tag">#AngularJs</span>
-    </div><!-- Post Details -->
-    <a class="readmore" href="article.html">Read more <i class="icon ion-ios-plus-empty"></i></a>
-  </div>
+  {% for post in site.posts | limit : 3 %}
+     {% include article.html %}
+  {% endfor %}
 
-  <div class="article">
-    <h4 class="title"><i class="icon ion-social-sass"></i> Introduction To Sass</h4>
-    <p class="shortDesc">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in...
-    </p>
-    <a class="readmore" href="">Read more <i class="icon ion-ios-plus-empty"></i></a>
-  </div>
-  <div class="article">
-    <h4 class="title"><i class="icon ion-social-nodejs"></i> Introduction To Nodejs</h4>
-    <p class="shortDesc">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in...
-    </p>
-    <a class="readmore" href="">Read more <i class="icon ion-ios-plus-empty"></i></a>
-  </div>
   <!-- Posts -->
   <!-- Pagination -->
   <div id="paginate">
@@ -50,15 +20,10 @@ layout: default
       <li><a href="#"><i class="icon ion-ios-arrow-right"></i></a></li>
     </ul>
   </div>
+
 </div><!-- Articles -->
 <!-- Side Articles Bar -->
 <div id="sideArticles" class="card">
-  <!-- search -->
-  <div class="search">
-    <input name="search" type="text" class="input" placeholder="Search">
-  </div>
-  <!-- search -->
-
   <!-- categories -->
 <div id="categories">
     <h3 class="label"><i class="icon ion-ios-glasses-outline"></i>Categories</h3>
