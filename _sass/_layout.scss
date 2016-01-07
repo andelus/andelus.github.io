@@ -13,6 +13,7 @@
 //Content
 .layout{
   @include container;
+  max-width: 100%;
 }
 
 //Header
@@ -88,16 +89,20 @@ footer{
         width: 7em;
       }
     }// Hover animation
+
   }//Medium
 
   }
   //Navigation Menu
   ul.nav{
+    padding-bottom: 20px;
     li{
-      //When screen is at meium size add a margin bottom to the links
+      //When screen is at medium size add a margin bottom to the links
       @include at-breakpoint($medium){
         margin-bottom: 40px;
+
       }
+
       i{
         padding-right: .4em;
         font-size: 1.8rem;
@@ -106,7 +111,7 @@ footer{
       a{
         @include single-transition(all,.5s,ease-out);
         font-size: 1.2rem;
-        font-weight: 100;
+        font-weight: 300;
         color: $lightgrey;
         &:hover{
           margin-left: .5rem;
@@ -122,9 +127,7 @@ footer{
   //Navigation Social
   .social{
     @include at-breakpoint($medium){
-      position: absolute;
-      bottom:0;
-      left:2.5em;
+
     }//Push social icons to the bottom when screen is at medium size
     ul.icons{
       text-align: center; //Align to the center when mobile view
@@ -150,6 +153,7 @@ footer{
 
 //Page Content
 #pageContent{
+  max-width: 100%;
   //on small size
   .tagline{
     margin-top: 1em;
@@ -240,6 +244,9 @@ footer{
      }
    }
   }
+
+
+
   //when screen is on medium
   @include at-breakpoint($medium){
     //@include span-columns(9.07,12);
@@ -373,3 +380,36 @@ footer{
   }
 
 }
+/* --------------- Latest Articles ------------- */
+    #latestArticles{
+      h3{
+        font-size: 1.8rem;
+      }
+      ul{
+        .title{
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+        .postDetails{
+          text-align: center;
+          font-size: 1rem;
+          margin: 10px auto;
+          span{
+            display: block;
+          }
+        }
+        @include at-breakpoint($medium){
+          .card{
+            @include span-columns(6 omega,12);
+            margin-left: 5px;
+          }
+          .postDetails{
+            @include postDetails;
+            text-align: inherit;
+            span{
+              display: inline;
+            }
+          }
+        }
+      }
+    }

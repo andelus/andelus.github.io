@@ -214,7 +214,7 @@
 
       }
       .readmore{
-        float: right;
+        text-align: right;
         color: darken($linegrey,30);
         &:hover{
           color: $purple;
@@ -227,6 +227,7 @@
       //Post Details
       .postDetails{
         @include postDetails;
+        clear:both;
       }
     }
 
@@ -280,6 +281,15 @@
     .post{
       .title{
 
+      }
+
+      //Code hightlight
+      .highlight{
+        background-color: $linegrey;
+        @include border-radius(10px);
+        margin: 10px auto;
+        padding: 10px;
+        @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 2px);
       }
     }
 
