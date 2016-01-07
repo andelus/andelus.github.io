@@ -4,6 +4,7 @@ title:  "Angularjs Getting Started"
 date:   2016-01-07 17:03:02 +0100
 categories: angularjs
 author: Tasfaout Yassine
+featured: true
 image: http://lorempicsum.com/futurama/350/200/5
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

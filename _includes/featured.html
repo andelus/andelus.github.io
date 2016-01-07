@@ -1,0 +1,11 @@
+<div id="articleCard" class="card">
+  <h4 class="title">{{post.title}}</h4>
+  <div class="articleImg">
+    <img src="{{post.image}}" alt="Post" />
+  </div>
+  <p class="shortDesc" >
+    {{post.content | strip_html | strip_newlines | truncate: 200}}
+  </p>
+  <span class="badge">#Featured</span>
+  <a class="readmore" href="#">Read more <i class="icon ion-ios-plus-empty"></i></a><!-- Read me -->
+</div>

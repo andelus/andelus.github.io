@@ -384,6 +384,7 @@ footer{
 /* --------------- Latest Articles ------------- */
     #latestArticles{
       h3{
+        text-align: center;
         font-size: 1.8rem;
       }
       #articleCard{
@@ -434,3 +435,46 @@ footer{
         }
       }
     }
+
+  /* --------------- Featured Article ------------- */
+  #featuredArticle{
+    #articleCard{
+      margin-bottom: 10px;
+      .badge{
+        background-color: $purple;
+        color:$lightgrey;
+
+        font-size: 1rem;
+        padding: 1px 10px;
+        @include border-radius(50px);
+      }
+      .title{
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+      }//title
+      .shortDesc{
+        padding: 5px;
+        border-bottom: 1px solid $linegrey;
+        margin-bottom: 10px;
+      }
+      .readmore{
+        float: right;
+      }
+      .articleImg{
+        img{
+          width:100%;
+          @include border-radius(5px);
+          @include opacity(0.8);
+          @include single-transition(all,.3s,ease-out);
+          &:hover{
+            @include opacity(1);
+          }
+        }
+      }
+      @include at-breakpoint($medium){
+
+      }
+    }
+  }
