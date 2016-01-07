@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll Rocks"
 date:   2016-01-06 17:03:02 +0100
-categories: ruby
+categories: project
 author: Tasfaout Yassine
 image: http://lorempicsum.com/futurama/350/200/8
 ---

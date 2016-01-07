@@ -2,7 +2,7 @@
 layout: post
 title:  "Angularjs Getting Started"
 date:   2016-01-07 17:03:02 +0100
-categories: angular
+categories: project
 tags: angular
 author: Tasfaout Yassine
 featured: true
