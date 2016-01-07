@@ -13,7 +13,7 @@
 //Content
 .layout{
   @include container;
-  max-width: 100%;
+  max-width:100%;
 }
 
 //Header
@@ -153,7 +153,7 @@ footer{
 
 //Page Content
 #pageContent{
-  max-width: 100%;
+
   //on small size
   .tagline{
     margin-top: 1em;
@@ -250,6 +250,7 @@ footer{
   //when screen is on medium
   @include at-breakpoint($medium){
     //@include span-columns(9.07,12);
+
     @include container;
     @include push(2.9);
     //@include susy-grid-background;
@@ -275,8 +276,8 @@ footer{
     }
     //Car
     .card{
-      width: columns(12,12);
-      margin-bottom: 2em;
+      //width: columns(12,12);
+      //margin-bottom: 2em;
     }
     //Skills
     #skills{
@@ -377,7 +378,7 @@ footer{
       }
     }
 /* --------------- Contact Page ---------------- */
-  }
+  }//Medium breakpoint
 
 }
 /* --------------- Latest Articles ------------- */
@@ -385,10 +386,16 @@ footer{
       h3{
         font-size: 1.8rem;
       }
-      ul{
+      #articleCard{
+
+        margin-bottom: 10px;
         .title{
-          font-size: 1.2rem;
+          font-size: 1.7rem;
           font-weight: bold;
+          text-align: center;
+        }//title
+        .shortDesc{
+          padding: 5px;
         }
         .postDetails{
           text-align: center;
@@ -398,11 +405,25 @@ footer{
             display: block;
           }
         }
-        @include at-breakpoint($medium){
-          .card{
-            @include span-columns(6 omega,12);
-            margin-left: 5px;
+        .articleImg{
+          img{
+            width: 100%;
+            @include border-radius(5px);
+            @include opacity(0.8);
+            @include single-transition(all,.3s,ease-out);
+            &:hover{
+              @include opacity(1);
+            }
           }
+        }
+        @include at-breakpoint($medium){
+            //Article width
+            width: 48%;
+            //float to the left
+            float:left;
+            //@include span-columns(6,12);
+            //&:nth-child(n) { @include omega;}
+            margin-right:10px;
           .postDetails{
             @include postDetails;
             text-align: inherit;
