@@ -23,7 +23,7 @@ So here is my story, it all started when i learned to use **Adobe Photoshop**. A
 >But it's not just about learning right! :sunglasses:
 
 I started a ongoing project called [Echooly](/project/echooly) as my graduation project. With a team of colleagues.
-It was a **web based school management**, to help **students** and **teachers** collaborate. Basically i just wanted to help myself and other fellow students to be more in touch with their teachers and actually be more **productive**. I knew from the beginning, that it should be an **SPA** so i used **AngularJs** by Google as **front-end** framework and **Laravel** as a **PHP** **back-end** framework. Where i had the opportunity to learn more about **OOP (Object Oriented Programming)**.
+It was a **web based school management**, to help **students** and **teachers** collaborate. Basically i just wanted to help myself and other fellow students to be more in touch with their teachers and actually be more **productive**. I knew from the beginning, that it should be an **SPA** so i used **AngularJs** by **Google** as **front-end** framework and **Laravel** as a **PHP** **back-end** framework. Where i had the opportunity to learn more about **OOP (Object Oriented Programming)**.
 
 > Of course when you talk about technology you have to mention mobile. :wink:
 
