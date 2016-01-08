@@ -394,8 +394,9 @@ footer{
           font-weight: 600;
         }
       }
-      img{
-
+      img[src$="#done"]{
+        display: block;
+        margin: 0 auto;
       }
       blockquote{
         display: block;
