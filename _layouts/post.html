@@ -8,7 +8,11 @@ layout: default
   <!-- Posts -->
   <div class="post">
     <h4 class="title">
-      <i class="icon ion-social-angular"></i> {{ page.title }}</h4>
+      {% for tag in page.tags%}
+        <i class="icon ion-social-{{tag}}"></i>
+      {% endfor %}
+
+       {{ page.title }}</h4>
     <div class="postContent">
       <img src="{{page.image}}" alt="" class="featured">
         <p>{{ content }}</p>
@@ -21,7 +25,10 @@ layout: default
         <i class="icon ion-ios-calendar-outline"></i>
         {{ page.date | date: "%b %-d, %Y" }}
       </span>
-      <span class="tag">#AngularJs</span>
+      {% for tag in page.tags%}
+        <span class="tag">#{{tag}}</span>
+      {% endfor %}
+
     </div><!-- Post Details -->
   </div>
   <!-- Posts -->

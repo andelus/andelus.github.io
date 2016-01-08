@@ -3,29 +3,35 @@ layout: default
 ---
 
   <!-- Hero Tagline -->
+
  <!-- Featured post -->
-
-
- <!-- Featured projects -->
  <div id="featuredArticle">
    <!-- Articles card -->
    {% assign count = 0 %}
-     {% for post in site.posts %}
+     {% for post in site.categories['blog'] %}
        {% if post.featured and count < 1%}
           {% include featured.html %}
        {% assign count = count | plus: 1%}
        {% endif %}
      {% endfor %}
-
-   </ul>
  </div>
+
+
 
  <!-- Latest Articles -->
  <div id="latestArticles">
    <h3>Latest articles</h3>
    <!-- Articles card -->
-     {% for post in site.posts | limit : 2 %}
+     {% for post in site.categories['blog'] | limit : 2 %}
         {% include post.html %}
      {% endfor %}
-   </ul>
+ </div>
+ <!-- Featured projects -->
+ <div id="featuredProjects">
+   <h3>Working on lately</h3>
+   <!-- Articles card -->
+     {% for project in site.categories['project'] | limit:2 %}
+          {% include project.html %}
+     {% endfor %}
+
  </div>

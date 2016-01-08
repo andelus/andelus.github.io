@@ -34,6 +34,9 @@ links:
   - title: Articles
     url: /articles
     icon: ion-ios-bookmarks-outline
+  - title: Projects
+    url: /projects
+    icon: ion-ios-lightbulb-outline
   - title: Say Hello
     url: /contact
     icon: ion-ios-chatbubble-outline
@@ -42,7 +45,7 @@ links:
 gems:
   - jekyll-compass
   - jekyll-assets
-  
+
 
 # Build settings
 markdown: kramdown

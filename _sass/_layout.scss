@@ -383,12 +383,12 @@ footer{
 }
 /* --------------- Latest Articles ------------- */
     #latestArticles{
+
       h3{
         text-align: center;
         font-size: 1.8rem;
       }
       #articleCard{
-
         margin-bottom: 10px;
         .title{
           font-size: 1.7rem;
@@ -428,13 +428,8 @@ footer{
           }
         }
         @include at-breakpoint($medium){
-            //Article width
-            width: 48%;
-            //float to the left
-            float:left;
-            //@include span-columns(6,12);
-            //&:nth-child(n) { @include omega;}
-            margin: 10px 8px;
+          @include span-columns(6 ,12);
+          &:nth-child(3n) { @include omega; }
           .postDetails{
             @include postDetails;
             text-align: inherit;
@@ -451,6 +446,7 @@ footer{
 
   /* --------------- Featured Article ------------- */
   #featuredArticle{
+    margin-bottom: 20px;
     #articleCard{
       margin-bottom: 10px;
       .badge{
@@ -490,5 +486,41 @@ footer{
       @include at-breakpoint($medium){
 
       }
+    }
+  }
+
+  /* --------- Featured Projects ------------- */
+  #featuredProjects{
+    clear: both;
+    h3{
+      padding-top: 10px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .project{
+      img{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+
+      }
+      h4{
+        font-family: $primaryfont;
+        font-weight: bold;
+        text-align: center;
+      }
+      padding: 5px;
+      @include at-breakpoint($medium){
+        @include span-columns(6 ,12);
+        &:nth-child(3n) { @include omega; }
+        img{
+          @include single-transition(all,.3s,ease-out);
+          @include filter(blur(2px) grayscale(100%));
+          &:hover{
+            @include filter(blur(0px) );
+          }
+        }
+      }
+
     }
   }
