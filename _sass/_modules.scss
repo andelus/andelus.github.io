@@ -18,9 +18,15 @@
     }
     .next{
       display: block;
-      @include small-button;
+      //@include small-button;
       float: right;
     }
+    .previous{
+      display: block;
+      //@include small-button;
+      float: left;
+    }
+
 /* --------------- Intro Page ---------------- */
 
 /* --------------- About Page ---------------- */
@@ -195,7 +201,7 @@
       .title{
         font-weight: bold;
         a{
-          
+
           @include single-transition(all,.3s,ease-out);
           &:hover{
             color: $purple;

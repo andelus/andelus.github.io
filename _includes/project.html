@@ -1,6 +1,15 @@
 <div class="project">
   <a href="{{project.url}}">
-    <img src="{{project.image}}" alt="{{project.title}}">
+    <img src="{{ project.image| prepend: site.baseurl }}" alt="{{project.title}}">
   </a>
   <h4 class="title">{{project.title}}</h4>
+  <div class="projectDetails">
+    <span class="date">
+      <i class="icon ion-ios-calendar-outline"></i>
+      {{ project.date | date: "%b %-d, %Y" }}
+    </span>
+    {% for tag in project.tags%}
+      <span class="tag">#{{tag}}</span>
+    {% endfor %}
+  </div>
 </div>

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div id="featuredProjects">
+  <h3>Working on lately</h3>
+  <!-- Projects Windows-->
+    {% for project in site.categories['project']  %}
+         {% include project.html %}
+    {% endfor %}
+</div>

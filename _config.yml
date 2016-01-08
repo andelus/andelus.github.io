@@ -45,7 +45,11 @@ links:
 gems:
   - jekyll-compass
   - jekyll-assets
+  - jekyll-paginate
+  - jemoji
 
-
+# Pagination settings
+paginate: 4
+paginate_path: "/articles/page:num/"
 # Build settings
 markdown: kramdown
