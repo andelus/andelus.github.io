@@ -43,10 +43,13 @@ links:
 
 # Plugins
 gems:
+  - compass
+  - susy
   - jekyll-compass
   - jekyll-assets
   - jekyll-paginate
   - jemoji
+
 
 # Pagination settings
 paginate: 4

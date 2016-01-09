@@ -177,40 +177,40 @@ footer{
   }//Profile image centred
 
   //Post Page on small device
-  .post{
-    .title{
-      font-family: $primaryfont;
-      font-weight: bold;
-      @include single-transition(all,.3s,ease-out);
-      font-size: 1.2rem;
-    }
-    .postContent{
-      padding: 20px;
-      .featured{
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        width: 70%;
+  #post{
+    .post{
+      .title{
+        font-family: $primaryfont;
+        font-weight: bold;
+        @include single-transition(all,.3s,ease-out);
+        font-size: 1.2rem;
       }
-      p{
-        text-indent: 1em;
-      }
-    }
-    .postDetails{
-
-      span{
-        display: block;
-        font-size: 1rem;
-        text-align: center;
-        i{
-          color:$purple;
+      .postContent{
+        @include markdown;
+        .featured{
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          padding:20px;
+          width: 70%;
         }
       }
-      .tag{
-        color: $purple;
-      }
-    }//Post details
-  }//Post title in small size
+      .postDetails{
+
+        span{
+          display: block;
+          font-size: 1rem;
+          text-align: center;
+          i{
+            color:$purple;
+          }
+        }
+        .tag{
+          color: $purple;
+        }
+      }//Post details
+    }//Post title in small size
+  }
 
   //Contact page in small size
   #contact{
@@ -326,11 +326,11 @@ footer{
 /* --------------- Articles Page ---------------- */
     //Articles
     #articles{
-      @include span-columns(8,12);
+      @include span-columns(12,12);
     }
     //Articles side bar
     #sideArticles{
-      @include span-columns(4 omega,12);
+      //@include span-columns(4 omega,12);
     }
 /* --------------- Articles Page ---------------- */
 
@@ -384,26 +384,7 @@ footer{
 }
 /* ------------- About Page ------------- */
     #about{
-      p{
-        margin-bottom: 16px;
-        strong{
-          color: $accentdark;
-          font-weight: 700;
-        }
-        a{
-          color: $green;
-          font-weight: 600;
-        }
-      }
-      blockquote{
-        display: block;
-        margin-left: 10px;
-        border-left: 3px solid $linegrey;
-        p{
-          padding-left: 5px;
-        }
-      }
-
+      @include markdown;
     }
 /* --------------- Latest Articles ------------- */
     #latestArticles{

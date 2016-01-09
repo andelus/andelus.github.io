@@ -108,3 +108,28 @@
     color: $purple;
   }
 }
+
+
+// markdown mixin
+@mixin markdown {
+  p{
+    margin-bottom: 16px;
+    strong{
+      color: $accentdark;
+      font-weight: 700;
+    }
+    a{
+      color: $green;
+      font-weight: 600;
+    }
+  }
+  blockquote{
+    display: block;
+    margin-left: 10px;
+    border-left: 3px solid $linegrey;
+    p{
+      padding-left: 5px;
+    }
+  }
+
+}
