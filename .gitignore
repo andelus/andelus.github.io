@@ -4,3 +4,4 @@ _site
 _compass
 _data
 .compass
+node_modules
