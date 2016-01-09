@@ -51,5 +51,13 @@ gems:
 # Pagination settings
 paginate: 4
 paginate_path: "/articles/page:num/"
+
+# Assets settings
+assets:
+  compress:
+    js: true
+  digest: true
+  sources:
+    - js
 # Build settings
 markdown: kramdown

@@ -7,9 +7,9 @@
     <!-- Social icons -->
     <div class="social">
       <ul class="icons">
-        <li><a href=""><i class="icon ion-social-linkedin-outline"></i></a></li>
-        <li><a href=""><i class="icon ion-social-github"></i></a></li>
-        <li><a href=""><i class="icon ion-social-twitter"></i></a></li>
+        <li><a href="https://dz.linkedin.com/in/{{site.linkedin_username}}"><i class="icon ion-social-linkedin-outline"></i></a></li>
+        <li><a href="https://github.com/{{site.github_username}}"><i class="icon ion-social-github"></i></a></li>
+        <li><a href="https://twitter.com/{{site.twitter_username}}"><i class="icon ion-social-twitter"></i></a></li>
       </ul><!-- Icon list -->
     </div><!-- Social icons -->
     <label for="menu">Menus :</label>
@@ -17,7 +17,7 @@
 
       <!-- Loop Trough Links -->
       {% for link in site.links %}
-        <li><a href="{{ link.url }}"><i class="icon {{ link.icon }}"></i>{{ link.title }}</a></li>
+        <li><a href="{{ link.url }}/"><i class="icon {{ link.icon }}"></i>{{ link.title }}</a></li>
       {% endfor %}
 
 

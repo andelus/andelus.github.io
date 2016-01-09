@@ -118,8 +118,9 @@ footer{
           color: $lightgreen ;
         }
       }// give hover effect to menu items
+      //Active links
       .active{
-        color: $lightgreen ;
+        color: $lightgreen;
         margin-left: .5rem;
       }
     }
@@ -393,10 +394,6 @@ footer{
           color: $green;
           font-weight: 600;
         }
-      }
-      img[src$="#done"]{
-        display: block;
-        margin: 0 auto;
       }
       blockquote{
         display: block;
