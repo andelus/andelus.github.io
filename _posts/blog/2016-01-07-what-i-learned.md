@@ -22,9 +22,9 @@ It was a **web based school management**, to help **students** and **teachers** 
 
 > Of course when you talk about technology you have to mention mobile. :wink:
 
-As an **Android** user, i really like it's ecosystem atleast in point of view. So thanks to a **codelab** of **android** that were organized by **Algeria Developer Community** ,**GDG Algeria** & sponsored by **Condor, Djezzy**.
+As an **Android** user, i really like it's ecosystem at least in point of view. So thanks to a **codelab** of **android** that were organized by **Algeria Developer Community** ,**GDG Algeria** & sponsored by **Condor, Djezzy**.
 
-I learned a lot about **Android**, it was my first experience with **Java**.I got the opportunity to enroll in a contest **Algeria 3G Cup** that occured after the codelabs. Where i built an application named [Rak Sure](/project/raksure-application) that helps to solve **math equations**, and answer questions about **scientific facts**. Which got me into the finals, competing with other ten **brilliant** finalists that i had the **honor** to meet and learned a lot from them.
+I learned a lot about **Android**, it was my first experience with **Java**.I got the opportunity to enroll in a contest **Algeria 3G Cup** that occurred after the codelabs. Where i built an application named [Rak Sure](/project/raksure-application) that helps to solve **math equations**, and answer questions about **scientific facts**. Which got me into the finals, competing with other ten **brilliant** finalists that i had the **honor** to meet and learned a lot from them.
 
 
 **The End**

@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Hey there !, I am Yassine from **Algeria**. Front-end Devloper. I am passionate about development, design and latest technologies.
-Also i am a coffee lover :coffee:
+Hey there !, I am Yassine from **Algeria**. Front-end Developer. I am passionate about development, design and latest technologies.
+Also i am a coffee enthusiast :coffee: 
 
   > My philosophy in life : **"Success is a life long project"** :relieved:
 
