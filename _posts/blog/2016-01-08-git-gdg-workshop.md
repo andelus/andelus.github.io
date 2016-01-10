@@ -5,6 +5,7 @@ date:   2016-01-08 18:03:02 +0100
 categories: blog
 tags: git
 author: Tasfaout Yassine
+thumbnail: "/assets/works/workshop-git.png"
 image: "/assets/works/workshop-git.png"
 comments: true
 ---

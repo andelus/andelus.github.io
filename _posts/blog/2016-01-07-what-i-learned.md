@@ -5,6 +5,7 @@ date:   2016-01-07 10:03:02 +0100
 categories: blog
 tags: personal
 author: Tasfaout Yassine
+thumbnail: "/assets/posts/motivation.jpg"
 image: "/assets/posts/motivation.jpg"
 comments: false
 ---
