@@ -232,11 +232,14 @@ footer{
    //Contact description and information padding
    .contactDesc, .contactInfo{
      @include markdown;
+
      padding: 10px;
    }
    //Contact card in small size
    .contactInfo{
+
      .contactCard{
+      list-style: none;
       li i{
         font-size: 1.6rem;
         color: $purple;
