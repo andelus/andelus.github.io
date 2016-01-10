@@ -28,7 +28,7 @@ links:
   - title: Let's meet
     url: /about
     icon: ion-ios-people-outline
-  - title: Super Powers
+  - title: Skills
     url: /skills
     icon: ion-ios-flask-outline
   - title: Articles
@@ -49,6 +49,7 @@ gems:
   - jekyll-assets
   - jekyll-paginate
   - jemoji
+  
 
 
 # Pagination settings
@@ -62,5 +63,10 @@ assets:
   digest: true
   sources:
     - js
+
+# Collections
+collections:
+  projects:
+    output: true
 # Build settings
 markdown: kramdown

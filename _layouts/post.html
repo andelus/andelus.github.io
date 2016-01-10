@@ -1,5 +1,6 @@
 ---
 layout: default
+
 ---
 
 <!-- Articles Card -->
@@ -30,5 +31,8 @@ layout: default
       {% endfor %}
 
     </div><!-- Post Details -->
+    {% if page.comments %}
+      {% include disqus.html %}
+    {% endif %}
   </div>
   <!-- Posts -->

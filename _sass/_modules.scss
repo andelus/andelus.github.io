@@ -27,7 +27,7 @@
       float: left;
     }
 
-  
+
 /* --------------- Intro Page ---------------- */
 
 /* --------------- About Page ---------------- */
@@ -296,7 +296,6 @@
         @include border-radius(10px);
         margin: 10px auto;
         padding: 10px;
-        @include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 2px);
       }
     }
 

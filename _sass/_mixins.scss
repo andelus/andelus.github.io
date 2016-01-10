@@ -113,14 +113,19 @@
 // markdown mixin
 @mixin markdown {
   p{
-    margin-bottom: 16px;
+    margin: 16px 0px;
     strong{
       color: $accentdark;
       font-weight: 700;
     }
     a{
-      color: $green;
+      color: $lightgreen;
       font-weight: 600;
+      @include single-transition(all,.3s,ease-out);
+      @include opacity(0.8);
+      &:hover{
+        @include opacity(1);
+      }
     }
   }
   blockquote{
@@ -130,6 +135,24 @@
     p{
       padding-left: 5px;
     }
+  }
+  ul,ol{
+    padding-left: 40px;
+
+  }
+  li{
+    color: $purple;
+    font-weight: normal;
+    strong{
+      font-weight: bold;
+    }
+  }
+  ul{
+    list-style: circle;
+  }
+  ol{
+    list-style: decimal;
+
   }
 
 }

@@ -214,6 +214,7 @@ footer{
 
   //Contact page in small size
   #contact{
+
     //Title
     h3{
       font-family: $primaryfont;
@@ -230,6 +231,7 @@ footer{
    }
    //Contact description and information padding
    .contactDesc, .contactInfo{
+     @include markdown;
      padding: 10px;
    }
    //Contact card in small size
@@ -531,3 +533,8 @@ footer{
       }
     }
   }
+
+  /* ------- Disqus Section --------- */
+    #disqus_thread{
+      padding-top: 20px;
+    }

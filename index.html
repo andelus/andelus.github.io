@@ -30,7 +30,8 @@ layout: default
  <div id="featuredProjects">
    <h3>Working on lately</h3>
    <!-- Articles card -->
-     {% for project in site.categories['project'] | limit:2 %}
+   {% assign projects = site.projects | sort: 'date' | reverse %}
+     {% for project in projects | limit:2 %}
           {% include project.html %}
      {% endfor %}
 

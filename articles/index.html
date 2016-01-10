@@ -6,8 +6,7 @@ layout: default
   <!-- Label -->
   <h3 class="label"><i class="icon ion-ios-paper-outline"></i>Latest Articles</h3>
   <!-- Posts -->
-  {% for post in paginator.posts | where:"categories","project" %}
-
+  {% for post in paginator.posts | where:"categories","blog" %}
      {% include article.html %}
   {% endfor %}
 

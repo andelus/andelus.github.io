@@ -6,5 +6,5 @@ categories: project
 tags: android
 author: Tasfaout Yassine
 image: "/assets/works/project-raksure.png"
-hidden: true
+
 ---
