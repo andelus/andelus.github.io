@@ -85,7 +85,7 @@ $ git add --all #=> This will stage all the untracked files.
 $ git add index.html #=> This will stage only index.html
 {% endhighlight %}
 
-> Staging a file is like taking a snapshot of it. To learn more about this concept [Here](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics#The-Three-States)
+> **Staging** a file is like taking a **snapshot** of it. To learn more about this concept [Here](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics#The-Three-States)
 
 Now that we added our new file to the **Staging Area** we just run a commit so it can be saved permanently in **.git/** directory.
 
@@ -93,3 +93,31 @@ Now that we added our new file to the **Staging Area** we just run a commit so i
 $ git commit -m "My First commit" #=> With a messsage.
 $ git commit  #=> This will take to Vim editor to enter your commit message.
 {% endhighlight %}
+
+* Time travelling :sunglasses:
+
+To see the **history** of your **commits** just run the following:
+
+{% highlight sh %}
+$ git log
+#=> This will log all commits.
+{% endhighlight %}
+
+You will get something like this
+
+![center](http://i.picresize.com/images/2016/01/11/fFMYj.png)
+
+{% highlight sh %}
+$ git log --oneline
+#=> This will log all commits, but in a short way.
+$ git log -n 1 --oneline
+#=> This will log one commit, in a short way.
+$ git log -p index.html
+#=> This will log all commits made, in index.html.
+{% endhighlight %}
+
+> Please note that there is other **combinations**, for **logging** history [Here](https://git-scm.com/docs/git-log)
+
+**To be continued** ...
+
+> [Part II](blog/git-gdg-workshop-continue)
