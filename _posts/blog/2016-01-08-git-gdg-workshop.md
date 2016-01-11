@@ -55,5 +55,41 @@ $ git config --global user.name "your name"
 {% highlight sh %}
 $ cd project_folder
 $ git init
-#=> Initialized empty Git repository in project_folder
+#=> Initialized empty Git repository in project_folder/.git/
+{% endhighlight %}
+
+* Commit changes:
+
+For example i created a project folder named **gittut** initialize it and created an empty **index.html** file:
+
+{% highlight sh %}
+$ touch index.html
+{% endhighlight %}
+
+> If you are using **Windows** you need to check **Unix commands** during **Git** Installation. For this command to work.
+
+Then run this to get the list of the untracked files:
+
+{% highlight sh %}
+$ git status
+{% endhighlight %}
+
+You will get something like this:
+
+![center](http://i.picresize.com/images/2016/01/11/sP6Az.png)
+
+As you can see **Git** already gives you some useful information. Telling you that there is an untracked file **index.html** and to do what is called **Staging** you need to run the following:
+
+{% highlight sh %}
+$ git add --all #=> This will stage all the untracked files.
+$ git add index.html #=> This will stage only index.html
+{% endhighlight %}
+
+> Staging a file is like taking a snapshot of it. To learn more about this concept [Here](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics#The-Three-States)
+
+Now that we added our new file to the **Staging Area** we just run a commit so it can be saved permanently in **.git/** directory.
+
+{% highlight sh %}
+$ git commit -m "My First commit" #=> With a messsage.
+$ git commit  #=> This will take to Vim editor to enter your commit message.
 {% endhighlight %}

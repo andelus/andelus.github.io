@@ -15,8 +15,13 @@ layout: default
 
        {{ page.title }}</h4>
     <div class="postContent">
-      <img src="{{page.image}}" alt="" class="featured">
+
+      <img src="{{page.image}}" alt="{{ page.title }}" class="featured">
+      {% if page.imageSource %}
+        <a href="{{page.imageSource}}" class="source">Source</a>
+      {% endif %}
         <p>{{ content }}</p>
+
     </div>
     <!-- Post Details -->
     <div class="postDetails">

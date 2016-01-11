@@ -190,9 +190,15 @@ footer{
         .featured{
           display: block;
           margin: 0 auto;
-          margin-bottom: 20px;
           padding:20px;
           width: 70%;
+        }
+        .source{
+          display: block;
+          font-size: 1rem;
+          text-align: center;
+          color: $lightgreen;
+
         }
       }
       .postDetails{
@@ -356,6 +362,12 @@ footer{
             display: inline;
           }
         }//Post details
+        .highlight{
+          background-color: $linegrey;
+          @include border-radius(10px);
+          margin: 10px auto;
+          padding: 10px;
+        }
       }
     }
 /* --------------- Post Page ---------------- */

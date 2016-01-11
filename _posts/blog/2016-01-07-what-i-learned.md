@@ -7,6 +7,7 @@ tags: personal
 author: Tasfaout Yassine
 thumbnail: "/assets/posts/motivation.jpg"
 image: "/assets/posts/motivation.jpg"
+imageSource: "http://theultralinx.com/2016/01/awesome-quotes-posters-pictures/"
 comments: false
 ---
 So here is my story, it all started when i learned to use **Adobe Photoshop**. And started designing web pages. It was so inspiring for me, that i was bound to turn those designs into code and bring them to the user hands. Then i started learning about **HTML**, at that time it was really confusing for me. Since i was using **tables** to structure my **layouts** :( it was so ugly and takes to much to load. Until i heard about **CSS**, and it was like someone showed me the **Ali baba's cave**. After that i was excited to learn about how to make beautiful **animations**. That's when **Javascript** entered in my life i remember the first time i made an element **fade in**, :smile: it was uplifting. I was craving for more so i started using **Jquery**.
@@ -29,4 +30,4 @@ I learned a lot about **Android**, it was my first experience with **Java**.I go
 
 **The End**
 
-![last](http://www.reactiongifs.com/r/jcwd.gif)
+![center](http://www.reactiongifs.com/r/jcwd.gif)
