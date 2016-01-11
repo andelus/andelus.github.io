@@ -121,3 +121,5 @@ $ git log -p index.html
 **To be continued** ...
 
 > [Part II](/blog/git-gdg-workshop-continue)
+
+> A very special thanks for all the **GDG Tlemcen** [Team](http://gdgtlemcen.org/). For giving me the opportunity to do this workshop.
