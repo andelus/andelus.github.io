@@ -120,4 +120,4 @@ $ git log -p index.html
 
 **To be continued** ...
 
-> [Part II](blog/git-gdg-workshop-continue)
+> [Part II](/blog/git-gdg-workshop-continue)
